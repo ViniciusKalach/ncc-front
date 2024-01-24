@@ -1,8 +1,9 @@
 import { useState } from "react";
 import netflex_logo from "../assets/netflex_logo.svg";
 import netflexBackground from "../assets/netflexbackground.svg"; // Importe a imagem SVG
-import "../App.css"
-import "../index.css"
+import "../App.css";
+import "../index.css";
+import { Link } from "react-router-dom";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
@@ -45,6 +46,9 @@ function LoginPage() {
             <button type="button" onClick={handleLogin}>
               Entrar
             </button>
+            <div className="signup-text">
+              Novo por aqui? <Link to="/registro">Assine agora.</Link>
+            </div>
           </div>
           <p className="read-the-docs">By Vinícius Kalach</p>
         </div>

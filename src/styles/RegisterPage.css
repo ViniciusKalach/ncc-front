@@ -1,0 +1,144 @@
+.footer {
+  color: rgb(255, 0, 0);;
+  background-color:rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.finalName {
+  font-size: 0.875rem;
+  margin-top: 1.5rem;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0rem;
+  text-align: center;
+} 
+
+.register-container {
+  position: relative;
+  height: 100vh;
+  width: 100vh;
+}
+
+.register-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: white;
+}
+
+.register-card {
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+  text-align: center;
+  color: white;
+}
+
+.background-register-image {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30vh;
+  background-size: cover;
+  filter: blur(2px);
+  z-index: -1;
+}
+
+.background-register-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20vh; /* Ajuste a altura da sombra conforme necessário */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+  z-index: 1; /* Certifique-se de que a sombra esteja na frente da imagem de fundo */
+}
+
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0); /* Cor escura de overlay */
+  z-index: -1; /* Move o overlay para trás da página de registro */
+}
+
+.FSMSL{
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.logo-r {
+  height: 2em; /* Ajuste a altura conforme necessário */
+  width: auto; /* Mantém a largura proporcional à altura */
+  padding: 1em;
+  position: absolute;
+  top: 1em; /* Ajuste a distância do topo conforme necessário */
+  left: 1em; /* Ajuste a distância da esquerda conforme necessário */
+  will-change: filter;
+  transition: filter 300ms, box-shadow 300ms;
+}
+
+.logo-r:hover {
+  filter: drop-shadow(0 0 2em #e91515aa);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: transparent;
+  color: white;
+}
+
+button {
+  background-color: #ec0c17;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #b20710;
+}
+
+.login-text {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888;
+}
+
+.read-the-docs {
+  margin-top: 20px;
+  font-size: 12px;
+}
