@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import netflex_logo from "./assets/netflex_logo.svg";
+import netflexBackground from "./assets/netflexbackground.svg"; // Importe a imagem SVG
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = () => {
+    // Lógica de autenticação aqui
+    console.log("Email:", email, "Senha:", password);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      {" "}
+      <img
+        src={netflexBackground}
+        className="background-image"
+        alt="Background"
+      />
+      <div className="login-container">
+        <div className="content">
+          <img src={netflex_logo} className="logo" alt="Netflix Logo" />
+          <div className="login-card">
+            <h1>Entrar</h1>
+            <label>
+              Email:
+              <input
+                type="text"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </label>
+            <label>
+              Senha:
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </label>
+            <button type="button" onClick={handleLogin}>
+              Entrar
+            </button>
+          </div>
+          <p className="read-the-docs">By Vinícius Kalach</p>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
