@@ -1,0 +1,56 @@
+import { useState } from "react";
+import netflex_logo from "../assets/netflex_logo.svg";
+import netflexBackground from "../assets/netflexbackground.svg"; // Importe a imagem SVG
+import "../App.css"
+import "../index.css"
+
+function LoginPage() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = () => {
+    // Lógica de autenticação aqui
+    console.log("Email:", email, "Senha:", password);
+  };
+
+  return (
+    <div>
+      {" "}
+      <img
+        src={netflexBackground}
+        className="background-image"
+        alt="Background"
+      />
+      <div className="login-container">
+        <div className="content">
+          <img src={netflex_logo} className="logo" alt="Netflix Logo" />
+          <div className="login-card">
+            <h1>Entrar</h1>
+            <label>
+              Email:
+              <input
+                type="text"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </label>
+            <label>
+              Senha:
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </label>
+            <button type="button" onClick={handleLogin}>
+              Entrar
+            </button>
+          </div>
+          <p className="read-the-docs">By Vinícius Kalach</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default LoginPage;
