@@ -3,14 +3,23 @@ import { Link } from "react-router-dom";
 import netflix_logo from "../assets/netflex_logo.svg";
 import netflexBackground from "../assets/netflexbackground.svg";
 import "../styles/RegisterPage.css";
+import { createUser } from "../services/APIService";
 
 function RegisterPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleRegister = () => {
-    // Lógica de registro aqui
+  const handleRegister = async () => {
+    try {
+      // Chame a função loginUser do APIService
+      const response = await createUser(email, password, name);
+
+      console.log("Cadastro bem-sucedido:", response);
+    } catch (error) {
+      console.error("Erro ao fazer cadastro:", error);
+    }
+    // Lógica de autenticação aqui
     console.log("Nome:", name, "Email:", email, "Senha:", password);
   };
 
@@ -63,7 +72,7 @@ function RegisterPage() {
           <p className="read-the-docs">By Vinícius Kalach</p>
         </div>
       </div>
-      
+
       <div className="footer">
         <h2>Footer</h2>
         <div className="finalName">Netflix Brasil</div>
