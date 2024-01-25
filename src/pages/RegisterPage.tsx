@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import netflix_logo from "../assets/netflex_logo.svg";
 import netflexBackground from "../assets/netflexbackground.svg";
-import "./RegisterPage.css";
+import "../styles/RegisterPage.css";
 
 function RegisterPage() {
   const [name, setName] = useState("");

@@ -4,12 +4,21 @@ import netflexBackground from "../assets/netflexbackground.svg"; // Importe a im
 import "../App.css";
 import "../index.css";
 import { Link } from "react-router-dom";
+import { loginUser } from "../services/APIService";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
+    try {
+      // Chame a função loginUser do APIService
+      const response = await loginUser(email, password);
+
+      console.log("Login bem-sucedido:", response);
+    } catch (error) {
+      console.error("Erro ao fazer login:", error);
+    }
     // Lógica de autenticação aqui
     console.log("Email:", email, "Senha:", password);
   };
