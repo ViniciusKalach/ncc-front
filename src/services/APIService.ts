@@ -1,5 +1,5 @@
 import axios from "axios";
-export const API_URL = "https://ncc-back-ek4ac4ajc-vinicius-kalachs-projects.vercel.app/";
+export const API_URL = "https://ncc-back-git-main-vinicius-kalachs-projects.vercel.app";
 
 export async function loginUser(email: string, password: string) {
     const response = await axios.post(`${API_URL}/users/login`, {email, password})
