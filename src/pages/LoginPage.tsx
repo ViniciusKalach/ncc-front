@@ -42,7 +42,7 @@ function LoginPage() {
             <h1>Entrar</h1>
             <label>
               Email:
-              <input
+              <input 
                 type="text"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -50,7 +50,7 @@ function LoginPage() {
             </label>
             <label>
               Senha:
-              <input
+              <input 
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
