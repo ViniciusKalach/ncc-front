@@ -62,13 +62,15 @@ label {
 }
 
 input {
-  width: 100%;
+  width: 80%;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #333;
   border-radius: 4px;
   background-color: transparent;
   color: white;
+  z-index: 1;
+  display: flex;
 }
 
 button {
