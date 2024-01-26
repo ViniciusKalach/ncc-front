@@ -9,6 +9,8 @@ function RegisterPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const linkedin =
+    "https://www.linkedin.com/in/vinícius-kalach-freitas-cato-a91951192";
 
   const handleRegister = async () => {
     try {
@@ -24,13 +26,12 @@ function RegisterPage() {
   };
 
   return (
-    <div>
+    <><div>
       <div className="dark-overlay"></div>
       <img
         src={netflexBackground}
         className="background-register-image"
-        alt="Background"
-      />
+        alt="Background" />
       <div className="register-container">
         <img src={netflix_logo} className="logo-r" alt="Netflix Logo" />
         <div className="register-content">
@@ -42,25 +43,21 @@ function RegisterPage() {
               <input
                 type="text"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
+                onChange={(e) => setName(e.target.value)} />
             </label>
             <label>
-              Quer assistir? Informe seu email para criar ou reiniciar sua
-              assinatura.
+              Email:
               <input
                 type="text"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
+                onChange={(e) => setEmail(e.target.value)} />
             </label>
             <label>
               Senha:
               <input
                 type="password"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
+                onChange={(e) => setPassword(e.target.value)} />
             </label>
             <button type="button" onClick={handleRegister}>
               Criar conta
@@ -72,12 +69,25 @@ function RegisterPage() {
           <p className="read-the-docs">By Vinícius Kalach</p>
         </div>
       </div>
+    </div><footer className="footer-container">
+        <div className="footer-content">
+          <div className="contact">
+            <h3>Contato</h3>
+            <p>
+              viniciuscato@hotmail.com |{" "}
+              <a href={linkedin} target="_blank" rel="noopener noreferrer">
+                LinkedIn
+              </a>
+            </p>
+          </div>
+        </div>
 
-      <div className="footer">
-        <h2>Footer</h2>
-        <div className="finalName">Netflix Brasil</div>
-      </div>
-    </div>
+        <div className="about-us">
+          <h3>Sobre Nós</h3>
+          <p>Netflex - Sua plataforma de streaming favorita.</p>
+        </div>
+      </footer>
+      </>
   );
 }
 

@@ -1,14 +1,16 @@
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import netflex_logo from "../assets/netflex_logo.svg";
-import netflexBackground from "../assets/netflexbackground.svg"; // Importe a imagem SVG
+import netflexBackground from "../assets/netflexbackground.svg"; 
 import "../App.css";
 import "../index.css";
-import { Link } from "react-router-dom";
 import { loginUser } from "../services/APIService";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const handleLogin = async () => {
     try {
@@ -16,6 +18,8 @@ function LoginPage() {
       const response = await loginUser(email, password);
 
       console.log("Login bem-sucedido:", response);
+
+      navigate("/vitrine");
     } catch (error) {
       console.error("Erro ao fazer login:", error);
     }
@@ -58,8 +62,8 @@ function LoginPage() {
             <div className="signup-text">
               Novo por aqui? <Link to="/registro">Assine agora.</Link>
             </div>
+            <p className="read-the-docs">By Vinícius Kalach</p>
           </div>
-          <p className="read-the-docs">By Vinícius Kalach</p>
         </div>
       </div>
     </div>

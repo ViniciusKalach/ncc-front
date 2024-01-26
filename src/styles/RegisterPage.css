@@ -6,6 +6,14 @@
   margin-top: 20px;
 }
 
+.footer-container h3 {
+  color: red
+}
+
+.footer-container p {
+  color: white
+}
+
 .finalName {
   font-size: 0.875rem;
   margin-top: 1.5rem;
