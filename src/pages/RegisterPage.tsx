@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import netflix_logo from "../assets/netflex_logo.svg";
-import netflexBackground from "../assets/netflexbackground.svg";
 import "../styles/RegisterPage.css";
 import { createUser } from "../services/APIService";
 
@@ -28,10 +27,6 @@ function RegisterPage() {
   return (
     <><div>
       <div className="dark-overlay"></div>
-      <img
-        src={netflexBackground}
-        className="background-register-image"
-        alt="Background" />
       <div className="register-container">
         <img src={netflix_logo} className="logo-r" alt="Netflix Logo" />
         <div className="register-content">
