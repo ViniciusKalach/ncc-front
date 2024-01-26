@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import netflex_logo from "../assets/netflex_logo.svg";
 import netflexBackground from "../assets/netflexbackground.svg"; 
-import "../App.css";
+import "../styles/LoginPage.css";
 import "../index.css";
 import { loginUser } from "../services/APIService";
 
