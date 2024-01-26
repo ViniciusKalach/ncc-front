@@ -8,6 +8,7 @@ function RoutesComponent() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="" element={<LoginPage />} />
         <Route path="/" element={<LoginPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/registro" element={<RegisterPage />} />
