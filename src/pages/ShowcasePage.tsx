@@ -51,30 +51,10 @@ const App: React.FC = () => {
         <section id="section2">
           <a href="#section1">‹</a>
           <div className="item">
-            <img src={filmMatrix} alt="filme Matrix" />
-          </div>
-          <div className="item">
-            <img src={filmTolstoi} alt="filme do Tolstói" />
-          </div>
-          <div className="item">
-            <img src={filmPiratasDoCaribe} alt="filme Piratas do Caribe" />
-          </div>
-          <div className="item">
-            <img src={filmPlatao} alt="filme do Platão" />
-          </div>
-          <div className="item">
-            <img src={filmSenhorDosAneis} alt="filme Senhor dos Anéis 1" />
-          </div>
-          <a href="#section3">›</a>
-        </section>
-
-        <section id="section3">
-          <a href="#section2">‹</a>
-          <div className="item">
-            <img src={filmSenhorDosAneis2} alt="filme Senhor dos Anéis 2" />
-          </div>
-          <div className="item">
             <img src={filmSenhorDosAneis3} alt="filme Senhor dos Anéis 3" />
+          </div>
+          <div className="item">
+            <img src={filmMatrix} alt="filme Matrix" />
           </div>
           <div className="item">
             <img src={filmOHobbit} alt="filme O Hobbit 1" />
@@ -84,6 +64,26 @@ const App: React.FC = () => {
           </div>
           <div className="item">
             <img src={filmOHobbit3} alt="filme O Hobbit 3" />
+          </div>
+          <a href="#section3">›</a>
+        </section>
+
+        <section id="section3">
+          <a href="#section2">‹</a>
+          <div className="item">
+            <img src={filmPlatao} alt="filme do Platão" />
+          </div>
+          <div className="item">
+            <img src={filmTolstoi} alt="filme do Tolstói" />
+          </div>
+          <div className="item">
+            <img src={filmPiratasDoCaribe} alt="filme Piratas do Caribe" />
+          </div>
+          <div className="item">
+            <img src={filmSenhorDosAneis} alt="filme Senhor dos Anéis 1" />
+          </div>
+          <div className="item">
+            <img src={filmSenhorDosAneis2} alt="filme Senhor dos Anéis 2" />
           </div>
           <a href="#section1">›</a>
         </section>
