@@ -14,7 +14,8 @@ html {
   }
 
   img {
-    width: 50vh;
+    max-width: 100%; /* Torna a imagem responsiva */
+    height: auto;
   }
 
   .footer-container h3 {
