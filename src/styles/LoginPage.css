@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0rem;
   text-align: center;
@@ -44,7 +44,7 @@
 
 .login-card {
   background-color: rgba(0, 0, 0, 0.747); 
-  padding: 20px;
+  padding: 5%;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -53,8 +53,8 @@
 
 .login-card input {
   width: 90%;
-  padding: 10px;
-  margin-bottom: 20px;
+  padding: 3%;
+  margin-bottom: 5%;
   border: 1px solid #333;
   border-radius: 4px;
   background-color: transparent;
@@ -64,19 +64,19 @@
 }
 
 h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 2em;
+  margin-bottom: 5%;
 }
 
 label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 3%;
 }
 
 input {
   width: 90%;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 5%;
   border: 1px solid #333;
   border-radius: 4px;
   background-color: transparent;
@@ -86,13 +86,13 @@ input {
 }
 
 button {
-  background-color: #ec0c17; /* Cor vermelha do Netflex */
+  background-color: #ec0c17; 
   color: white;
   padding: 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1.2em;
 }
 
 button:hover {
@@ -100,10 +100,20 @@ button:hover {
 }
 
 .read-the-docs {
-  margin-top: 20px;
-  font-size: 12px;
+  margin-top: 5%;
+  font-size: 0.8em;
 }
 
 .card {
   padding: 2em;
+}
+
+@media screen and (max-width: 768px) {
+  .login-card {
+    padding: 10%;
+  }
+  .background-image {
+    background-size: auto; /* Ou ajuste para 'auto' dependendo do efeito desejado */
+    filter: blur(1px); /* Reduza o desfoque para telas menores, se necessário */
+}
 }
