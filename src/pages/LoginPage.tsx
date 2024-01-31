@@ -19,6 +19,10 @@ function LoginPage() {
 
       console.log("Login bem-sucedido:", response);
 
+      // Armazene o token no localStorage
+      localStorage.setItem("access_token", response.token);
+
+      // Redirecione o usuário para a página principal
       navigate("/vitrine");
     } catch (error) {
       console.error("Erro ao fazer login:", error);

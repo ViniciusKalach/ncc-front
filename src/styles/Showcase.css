@@ -14,7 +14,7 @@ html {
   }
 
   img {
-    max-width: 100%; /* Torna a imagem responsiva */
+    max-width: 100%; 
     height: auto;
   }
 
@@ -31,16 +31,16 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #000; /* Adicione uma cor de fundo para melhor visualização */
+    background-color: #000; 
   }
   
   .HeaderShowcase h1 {
     margin: 0;
-    color: #ff0000; /* Adicione uma cor de texto para melhor visualização */
+    color: #ff0000; 
   }
   
   .HeaderShowcase a {
-    color: #fff; /* Adicione uma cor de texto para melhor visualização */
+    color: #fff; 
     text-decoration: none;
   }
   

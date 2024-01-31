@@ -15,17 +15,38 @@ import filmSenhorDosAneis from "../assets/films/filmSenhorDosAneis.jpg";
 import filmSenhorDosAneis2 from "../assets/films/filmSenhorDosAneis2.jpg";
 import filmSenhorDosAneis3 from "../assets/films/filmSenhorDosAneis3.jpg";
 import filmPlatao from "../assets/films/filmPlatao.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const App: React.FC = () => {
+const ShowcasePage: React.FC = () => {
   const linkedin =
     "https://www.linkedin.com/in/vinícius-kalach-freitas-cato-a91951192";
+
+  const navigate = useNavigate();
+
+  // Verifica se há um token no localStorage
+  const token = localStorage.getItem("access_token");
+
+  if (!token) {
+    // Se não houver token, redireciona o usuário para a página de login
+    window.location.href = "/login";
+  }
+
+  // função de loggout 
+  const handleLogout = () => {
+    // Remova o token do localStorage
+    localStorage.removeItem("access_token");
+    // Redirecione o usuário para a página de login
+    navigate("/login");
+  };
+
 
   return (
     <>
       <div className="HeaderShowcase">
         <h1>NETFLEX</h1>
-        <Link to="/login">Sair</Link>
+        <Link to="/login" onClick={handleLogout}>
+          Sair
+        </Link>
       </div>
 
       <div className="wrapper">
@@ -111,4 +132,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default ShowcasePage;
