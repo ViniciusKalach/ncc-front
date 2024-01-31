@@ -96,7 +96,7 @@ button {
 }
 
 button:hover {
-  background-color: #b20710; /* Cor vermelha mais escura no hover */
+  background-color: #b20710; 
 }
 
 .read-the-docs {
